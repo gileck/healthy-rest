@@ -13,7 +13,7 @@ export function Map({ restaurants, onMarkerClick, selectedRestIndex, setSelected
     };
     return <div style={{height: '100vh', width: '50%', flex: 1, padding: '10px', boxSizing: 'border-box'}}>
         <GoogleMapReact
-            bootstrapURLKeys={{key: "AIzaSyDSlp-3D4euFkPH_7smflXKwu9p3x8j8y8"}}
+            bootstrapURLKeys={{key: process.env.GOOGLE_MAPS_API_KEY}}
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}
             onClick={() => setSelectedRestIndex(null)}
